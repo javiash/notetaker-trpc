@@ -5,7 +5,7 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 const Header: NextComponentType<NextPageContext> = () => {
   const { data: sessionData } = useSession();
   return (
-    <Container m={0} px={2} py={2} c='white' bg='indigo'>
+    <Container fluid px={2} py={2} c='white' bg='indigo'>
       <Group position='apart' p={10}>
         <Text size='md'>
           {sessionData?.user?.name ? `Notes for ${sessionData.user.name}` : ''}
